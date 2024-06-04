@@ -3,7 +3,7 @@
 2. Buka terminal dan arahkan ke folder repository ini
 3. Jalankan perintah `flutter pub get`
 4. Cek rest api di file `utils/config.dart` pastikan sudah benar
-5. jalan kan perintah `flutter run` untuk menjalankan aplikasi
+5. jalankan perintah `flutter run` untuk menjalankan aplikasi
 
 ## Package
 - flutter_bloc: ^8.1.5
