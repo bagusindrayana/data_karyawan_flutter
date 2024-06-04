@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:data_karyawan/models/karyawan.dart';
 import 'package:data_karyawan/repositories/karyawan_repository.dart';
@@ -57,7 +58,9 @@ class KaryawanBloc extends Bloc<KaryawanEvent, KaryawanState> {
   }
 
   void addKaryawan(Karyawan karyawan) async {
-    print("ADD EVENT");
+    if (kDebugMode) {
+      print("ADD EVENT");
+    }
     emit(KaryawanLoading());
     try {
       final newKaryawan = await karyawanRepository.addKaryawan(karyawan);

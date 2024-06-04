@@ -238,7 +238,6 @@ class _AddPageState extends State<AddPage> {
                                 if (formKey.currentState != null &&
                                     formKey.currentState!.validate() &&
                                     state is! KaryawanLoading) {
-                                  print("Add Karyawan");
                                   addKaryawan();
                                 }
                               },

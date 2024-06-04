@@ -1,5 +1,6 @@
 import 'package:data_karyawan/utils/config.dart';
 import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
 
 class DioClient {
   DioClient._();
@@ -60,7 +61,9 @@ class DioClient {
         onSendProgress: onSendProgress,
         onReceiveProgress: onReceiveProgress,
       );
-      print(response.data);
+      if (kDebugMode) {
+        print(response.data);
+      }
       if (response.statusCode == 200 || response.statusCode == 204) {
         if (response.data is String) {
           return {"message": response.data};
@@ -76,8 +79,10 @@ class DioClient {
       }
       throw "something went wrong";
     } catch (e, t) {
-      print(e);
-      print(t);
+      if (kDebugMode) {
+        print(e);
+        print(t);
+      }
       rethrow;
     }
   }

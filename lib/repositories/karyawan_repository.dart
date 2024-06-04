@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:data_karyawan/models/karyawan.dart';
 import 'package:data_karyawan/utils/dio_client.dart';
 import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
 
 class KaryawanRepository {
   Future<List<Karyawan>> getKaryawanList() async {
@@ -19,7 +20,9 @@ class KaryawanRepository {
   Future<Karyawan> addKaryawan(Karyawan karyawan) async {
     const url = "/karyawan/insert";
     List<dynamic> karyawanList = [karyawan.toJson()];
-    print(jsonEncode(karyawanList));
+    if (kDebugMode) {
+      print(jsonEncode(karyawanList));
+    }
     final response = await DioClient.instance.post(url,
         data: jsonEncode(karyawanList),
         options: Options(responseType: ResponseType.plain));
