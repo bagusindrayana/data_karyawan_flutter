@@ -17,3 +17,11 @@
 2. Jalankan perintah `flutter build apk` untuk versi debug
 3. Jalankan perintah `flutter build apk --release` untuk versi release
 4. file apk akan ada di folder `build/app/outputs/flutter-apk/`
+
+## Stuktur Project
+- assets: folder untuk menyimpan asset seperti gambar, animasi dll
+- lib/bloc: folder untuk menyimpan class, event, dan state bloc
+- lib/model: folder untuk menyimpan class model
+- lib/pages: folder untuk menyimpan halaman aplikasi
+- lib/repository: folder untuk menyimpan class repository
+- lib/utils: folder untuk menyimpan berbagai class helper
