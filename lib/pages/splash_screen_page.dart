@@ -1,6 +1,7 @@
 import 'package:data_karyawan/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:lottie/lottie.dart';
 
 class SplashScreenPage extends StatefulWidget {
   const SplashScreenPage({super.key});
@@ -14,7 +15,7 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Future.delayed(const Duration(seconds: 2), () {
+    Future.delayed(const Duration(seconds: 3), () {
       Navigator.of(context).pushReplacement(MaterialPageRoute(
         builder: (context) => const HomePage(),
       ));
@@ -35,7 +36,12 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
                   "assets/undraw_hire_re_gn5j.svg",
                   semanticsLabel: 'Ilustrasi',
                   width: 200,
-                )
+                ),
+                SizedBox(
+                  height: 16,
+                ),
+                Lottie.asset('assets/lottie/loading.json',
+                    width: 150, height: 150),
               ]),
         ),
       ),

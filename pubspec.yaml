@@ -67,6 +67,7 @@ flutter:
   assets:
     - assets/lottie/error.json
     - assets/lottie/success.json
+    - assets/lottie/loading.json
     - assets/undraw_hire_re_gn5j.svg
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
