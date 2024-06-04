@@ -1,4 +1,4 @@
-## Instalasi
+## Development
 1. Clone repository ini
 2. Buka terminal dan arahkan ke folder repository ini
 3. Jalankan perintah `flutter pub get`
