@@ -69,6 +69,7 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         ListTile(
                           leading: CircleAvatar(
+                            radius: 40,
                             child: Text("${karyawan.getInitials()}"),
                           ),
                           title: Text(
@@ -76,7 +77,13 @@ class _HomePageState extends State<HomePage> {
                             style: const TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 18),
                           ),
-                          subtitle: Text("NIK : ${karyawan.nik}"),
+                          subtitle: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text("NIK : ${karyawan.nik}"),
+                              Text("Alamat : ${karyawan.alamat}")
+                            ],
+                          ),
                           trailing: karyawan.aktif == true
                               ? const Icon(
                                   Icons.check_circle,
