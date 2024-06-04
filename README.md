@@ -10,3 +10,9 @@
 - dio: ^5.4.3+1
 - equatable: ^2.0.5
 - lottie: ^3.1.2
+
+## Build APK
+1. Buka terminal pada folder repository/project ini
+2. Jalankan perintah `flutter build apk` untuk versi debug
+3. Jalankan perintah `flutter build apk --release` untuk versi release
+4. file apk akan ada di folder `build/app/outputs/flutter-apk/`
