@@ -10,6 +10,7 @@
 - dio: ^5.4.3+1
 - equatable: ^2.0.5
 - lottie: ^3.1.2
+- flutter_svg: ^2.0.10+1
 
 ## Build APK
 1. Buka terminal pada folder repository/project ini
